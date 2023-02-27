@@ -34,7 +34,9 @@ fun CoinDetailScreen(
         .fillMaxSize()
         .padding(horizontal = 10.dp)){
         state.coin?.let { coin ->
-            LazyColumn(modifier = Modifier.fillMaxSize()){
+            LazyColumn(modifier = Modifier
+                .fillMaxSize()
+                .padding(top = 5.dp)){
                 item {
                     Row (
                         modifier = Modifier.fillMaxWidth(),
