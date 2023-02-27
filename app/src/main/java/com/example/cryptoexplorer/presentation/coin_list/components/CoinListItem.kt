@@ -40,6 +40,7 @@ fun CoinListItem(
             textAlign = TextAlign.End,
             style = MaterialTheme.typography.body2,
             modifier = Modifier
+                .fillMaxWidth()
                 .align(CenterVertically)
         )
     }
