@@ -30,7 +30,9 @@ fun CoinDetailScreen(
 ){
     val state = viewModel.state.value
 
-    Box(modifier = Modifier.fillMaxSize()){
+    Box(modifier = Modifier
+        .fillMaxSize()
+        .padding(horizontal = 10.dp)){
         state.coin?.let { coin ->
             LazyColumn(modifier = Modifier.fillMaxSize()){
                 item {
@@ -39,7 +41,7 @@ fun CoinDetailScreen(
                         horizontalArrangement = Arrangement.SpaceBetween
                     ){
                         Text(
-                            text = "${coin.rank}. ${coin.name} (${coin.symbol})",
+                            text = "${coin.name} (${coin.symbol})",
                             style = MaterialTheme.typography.h2,
                             modifier = Modifier.weight(8f)
                         )
